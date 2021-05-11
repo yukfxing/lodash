@@ -15,6 +15,7 @@
  * forEach(saves, type => asyncSave({ 'type': type, 'complete': done }))
  * // => Logs 'done saving!' after the two async saves have completed.
  */
+// 在柯里化返回的函数调用n次后调用func
 function after(n, func) {
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function')
