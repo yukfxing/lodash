@@ -16,6 +16,9 @@ import baseFlatten from './.internal/baseFlatten.js'
  * at(object, ['a[0].b.c', 'a[1]'])
  * // => [3, 4]
  */
+
+// baseAt
+// baseFlatten 数组扁平化
 const at = (object, ...paths) => baseAt(object, baseFlatten(paths, 1))
 
 export default at
