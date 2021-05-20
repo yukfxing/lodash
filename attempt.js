@@ -19,6 +19,7 @@ import isError from './isError.js'
  *   elements = []
  * }
  */
+// 特殊try catch
 function attempt(func, ...args) {
   try {
     return func(...args)
