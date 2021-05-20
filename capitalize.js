@@ -14,6 +14,7 @@ import toString from './toString.js'
  * capitalize('FRED')
  * // => 'Fred'
  */
+// 字符串转小写之后再将首字母大写
 const capitalize = (string) => upperFirst(toString(string).toLowerCase())
 
 
