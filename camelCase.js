@@ -21,6 +21,7 @@ import toString from './toString.js'
  * camelCase('__FOO_BAR__')
  * // => 'fooBar'
  */
+// 将字符串分词，除第一个词外，其他词首字母大写
 const camelCase = (string) => (
   words(toString(string).replace(/['\u2019]/g, '')).reduce((result, word, index) => {
     word = word.toLowerCase()
