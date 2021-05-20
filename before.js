@@ -13,15 +13,18 @@
  * jQuery(element).on('click', before(5, addContactToList))
  * // => Allows adding up to 4 contacts to the list.
  */
+// 限制函数执行次数为n-1
 function before(n, func) {
   let result
   if (typeof func !== 'function') {
     throw new TypeError('Expected a function')
   }
   return function(...args) {
+//  n > 1 时执行函数   
     if (--n > 0) {
       result = func.apply(this, args)
     }
+//  n <= 1 时注销函数
     if (n <= 1) {
       func = undefined
     }
