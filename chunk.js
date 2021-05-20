@@ -27,9 +27,11 @@ function chunk(array, size = 1) {
   }
   let index = 0
   let resIndex = 0
+  // 向上取整，创建一个空数组保存结果  
   const result = new Array(Math.ceil(length / size))
 
   while (index < length) {
+  // 切分原数组，每个数组元素个数为size    
     result[resIndex++] = slice(array, index, (index += size))
   }
   return result
