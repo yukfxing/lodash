@@ -15,6 +15,7 @@
  * clamp(10, -5, 5)
  * // => 5
  */
+// 判断number是否在lower和upper之间
 function clamp(number, lower, upper) {
   number = +number
   lower = +lower
@@ -22,7 +23,9 @@ function clamp(number, lower, upper) {
   lower = lower === lower ? lower : 0
   upper = upper === upper ? upper : 0
   if (number === number) {
+    // number 大于最大值返回最大值
     number = number <= upper ? number : upper
+    // number 小于最小值返回最小值    
     number = number >= lower ? number : lower
   }
   return number
