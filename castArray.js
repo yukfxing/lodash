@@ -30,6 +30,7 @@
  * console.log(castArray(array) === array)
  * // => true
  */
+// 参数转数组
 function castArray(...args) {
   if (!args.length) {
     return []
