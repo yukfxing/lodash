@@ -13,7 +13,9 @@ import strictIndexOf from './strictIndexOf.js'
  */
 function baseIndexOf(array, value, fromIndex) {
   return value === value
+//   不是NAN就正常查找
     ? strictIndexOf(array, value, fromIndex)
+//   NAN用特殊函数判断
     : baseFindIndex(array, baseIsNaN, fromIndex)
 }
 
