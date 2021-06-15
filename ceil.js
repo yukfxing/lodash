@@ -19,6 +19,7 @@ import createRound from './.internal/createRound.js'
  * ceil(6040, -2)
  * // => 6100
  */
+// read
 const ceil = createRound('ceil')
 
 export default ceil
